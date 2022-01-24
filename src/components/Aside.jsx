@@ -10,7 +10,7 @@ function Aside() {
           <NavLink end to="/about"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
             O NAS
           </NavLink>
-          <NavLink end to="/ofer"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
+          <NavLink end to="/offer"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
             OFERTA
           </NavLink>
           <NavLink end to="/fleet"   className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>

@@ -1,4 +1,55 @@
+@import "variables";
+
 .contact{
-  background-color: yellow;
-  width: 100%;
+  flex:1;
+  font-family: $primary-font;
+  background-color: $bcg-color;
+  color: $light-color;
+  padding: 50px 70px;
+  position: relative;
+  &__title{
+    font-size: 6rem;
+    letter-spacing: 15px;
+  }
+  &__info{
+    color: $lred-color;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+  }
+    &__label{
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      margin-right: 10px;
+      line-height: 3rem;
+    }
+    &__form{
+      & input, textarea{
+        font-family: $primary-font;
+        background-color: inherit;
+        border: 2px solid $light-color;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: $light-color;
+      }
+    }
+    &__btn{
+      position: absolute;
+      bottom: 10vh;
+      right: 20vw;
+      background-color: $dred-color;
+      width: 150px;
+      height: 50px;
+      border: 1px solid $dred-color;
+      color: $silver-color;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      scale: 1;
+      animation: grow 3s infinite;
+      &:hover{
+        color: black;
+      }
+    }
 }

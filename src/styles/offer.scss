@@ -1,0 +1,93 @@
+@import "variables";
+
+.offer{
+  flex:1;
+  position: relative;
+  font-family: $primary-font;
+  &__img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  &__info{
+    background-color: rgba(0, 0, 0, 0.89);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }  
+  &__options{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0b090a9f;
+  }
+  &__btn{
+    width: 33.3%;
+    background-color: #0b090a00;
+    border: none;
+    font-size: 1.5rem;
+    color: $light-color;
+    letter-spacing: 3px;
+  }
+  &__text{
+    padding: 60px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    & h1{
+      font-size: 4rem;
+
+      color: $silver-color;
+    }
+    & p {
+      width: 80%;
+      color: $white-color;
+      margin-top: 40px;
+      line-height: 1.8em;
+    }
+    &-btn{
+      position: absolute;
+      bottom: 10vh;
+      right: 8vw;
+      background-color: $dred-color;
+      width: 250px;
+      height: 50px;
+      border: 1px solid $dred-color;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      scale: 1;
+      animation: grow 3s infinite;
+      & a{
+        text-decoration: none;
+        color: $light-color;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(1)
+  }
+ 50% {
+  transform: scale(1.1)
+}
+100% {
+  transform: scale(1)
+}
+}
+
+
+.activeBtn{
+  height: 100%;
+  background-color: #0b090a00;
+  border-bottom: 3px solid $lred-color;
+  color: $lred-color;
+}

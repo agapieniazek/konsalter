@@ -5,7 +5,8 @@ function Topbar() {
   return (
     <div className='topbar'>
       <div className="topbar__logo">
-        <a href="/">        <h1>KONSALTER</h1></a>
+        <a href="/">     
+           <h1>KONSALTER</h1></a>
       </div>
       <div className="topbar__contact">
         <p>+48 606 473 267</p>

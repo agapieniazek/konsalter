@@ -1,21 +1,24 @@
 import React from 'react';
 import "../styles/header.scss";
 import { motion } from 'framer-motion';
-
-const url ="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+import video from "../images/header.mp4";
 
 function Header() {
   return (
     <div 
     className='header'>
-      <motion.div className="header__img" initial={{opacity:0}} 
-    animate={{opacity: 1}} 
-    exit={{opacity:0}}>
-        <img src={url} alt="header" />
+      <motion.div className="header__img" 
+      initial={{opacity:0, y:-1000}} 
+    animate={{opacity: 1, y: 0}} 
+    exit={{opacity:0, y:-1000}}
+    transition={{duration:1.5}}>
+                <video autoPlay loop muted>
+          <source src={video} type="video/mp4"/>
+        </video>
       </motion.div>
       <div className="header__info">
       <h1>Profesjonalny transport samochodów</h1>
-      <button>DOWIEDZ SIĘ WIĘCEJ</button>
+      <button>ZOBACZ OFERTE</button>
       </div>
     </div>
   )

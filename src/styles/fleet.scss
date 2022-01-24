@@ -1,0 +1,54 @@
+.fleet{
+  width: calc(100vw - 11vw);
+  height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr, 1fr;
+ position: relative;
+ background-color: black;
+ &__wrapper{
+  overflow: hidden;
+ }
+ &__img{
+   width: 100%;
+   height: 100%;
+   transition: all 0.5s ease;
+   &:hover{
+     transform: scale(1.1);
+   }
+ }
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.699);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  &__arrows{
+    position: absolute;
+    color: white;
+    font-size: 5rem;
+    &__left{
+      left: 15px;
+    }
+    &__right{
+      right: 15px;
+    }
+  }
+  &__img{
+    width: 50%;
+    object-fit: cover;
+  }
+  &__close{
+    color: white;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-top: -40%;
+    padding: 10px;
+    cursor: pointer;
+  }
+}

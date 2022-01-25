@@ -1,7 +1,6 @@
 import './styles/global.scss';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {AnimatePresence} from "framer-motion";
-import { useLocation } from 'react-router';
 
 import Topbar from './components/Topbar';
 import Aside from './components/Aside';

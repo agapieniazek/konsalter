@@ -20,19 +20,36 @@
     }
   }
   &__contact{
-    flex: 6;
+    flex: 10;
     display: flex;
     justify-content: end;
     align-items: center;
     height: 100%;
     color: $lred-color;
+    & p{
+      margin-left: 3vw;
+      font-size: 1.5rem;
+      font-weight: 200;
+      letter-spacing: 6px;
+      margin-right: 2vw;
+    }
+
   }
   &__lang{
     flex:1;
     height: 100%;
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    background-color: $dred-color;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  &__active{
+    background-color: black;
     color: $dred-color;
+    border: 1px solid $dred-color;
+    padding: 5px;
+    text-align: center;
   }
 }

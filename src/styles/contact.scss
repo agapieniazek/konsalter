@@ -5,15 +5,22 @@
   font-family: $primary-font;
   background-color: $bcg-color;
   color: $light-color;
-  padding: 50px 70px;
+  padding: 30px 70px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  &__left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
   &__title{
     font-size: 6rem;
     letter-spacing: 15px;
   }
   &__info{
     color: $lred-color;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
     margin: 0 0 30px 0;
@@ -39,11 +46,10 @@
       height: 40%;
     }
     &__btn{
-      position: absolute;
-      bottom: 10vh;
-      right: 20vw;
       background-color: $dred-color;
       width: 150px;
+      margin-top: 20px;
+      margin-left: 80%;
       height: 50px;
       border: 1px solid $dred-color;
       color: $silver-color;
@@ -58,5 +64,41 @@
     }
     &__msg{
       color: $lred-color;
+    }
+    &__right{
+      width: 100%;
+      height: 100%;
+      margin: 120px;
+      margin-left: 160px;
+      margin-right: 100px;
+      border: 2px solid $silver-color;
+      border-radius: 10px;
+      display: flex;
+      padding: 20px;
+      text-align: center;
+      padding-top: 5vw;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      & h2{
+        font-size: 2rem;
+        color: $light-color;
+        letter-spacing: 8px;
+      }
+      & h3{
+        letter-spacing: 5px;
+        color: $silver-color;
+        font-size: 1.4rem;  
+        margin-bottom: 2vw;
+      }
+      & p{
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        text-align: start;
+        margin-top: 1vw;
+      }
+      & p >i {
+        color: $dred-color;
+      }
     }
 }

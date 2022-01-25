@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../styles/header.scss";
 import { motion } from 'framer-motion';
 import video from "../images/header.mp4";
+import { Context } from '../context/Context';
 
 function Header() {
+  const {lang} = useContext(Context);
   return (
     <div 
     className='header'>
@@ -17,8 +19,8 @@ function Header() {
         </video>
       </motion.div>
       <div className="header__info">
-      <h1>Profesjonalny transport samochodów</h1>
-      <button><a href="/offer">ZOBACZ OFERTE</a></button>
+      <h1>{lang ? "Proffesional car transport company" : "Profesjonalny transport samochodów"}</h1>
+      <button><a href="/offer">{lang ? "OFFER" : "ZOBACZ OFERTE"}</a></button>
       </div>
     </div>
   )

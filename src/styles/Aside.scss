@@ -6,6 +6,8 @@
   height: calc(100vh - 80px);
   position: relative;
   background-color: $dred-color;
+  display: flex;
+  flex-direction: column;
   &__list{
     height: calc(100vh - 120px);
     display: flex;
@@ -46,12 +48,17 @@
   }
   &__rodo{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     height: 40px;
     width: 100%;
-    background-color: $dred-color;
+    background-color: $bcg-color;
+    overflow: hidden;
+    height: 8%;
     bottom: 0;
+    color: $silver-color;
+    font-size: 0.8rem;
   }
 }

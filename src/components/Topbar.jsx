@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../context/Context';
 import "../styles/topbar.scss";
 
+
 function Topbar() {
+  const {lang, dispatch} = useContext(Context);
+
+  const toggleLang = () => {
+    dispatch({type: "SWITCH_LANG"})
+  }
+  
   return (
     <div className='topbar'>
       <div className="topbar__logo">
@@ -13,8 +21,8 @@ function Topbar() {
         <p>dzieszko@op.pl</p>
       </div>
       <div className='topbar__lang'>
-        <span>EN</span>
-        <span>PL</span>
+        <span className={lang ? "topbar__active" : null} onClick={toggleLang}>EN</span>
+        <span className={lang ? null : "topbar__active"} onClick={toggleLang}>PL</span>
       </div>
     </div>
   )

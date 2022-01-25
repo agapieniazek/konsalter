@@ -43,6 +43,15 @@
         color: white;
         border-color: $dred-color;
       }
+      & a{
+        text-decoration: none;
+        color: $silver-color;
+        &:hover{
+          color: white;
+          border-color: $dred-color;
+        }
+  
+      }
     }
   }
 }

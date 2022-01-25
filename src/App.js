@@ -1,6 +1,7 @@
 import './styles/global.scss';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {AnimatePresence} from "framer-motion";
+import { useLocation } from 'react-router';
 
 import Topbar from './components/Topbar';
 import Aside from './components/Aside';
@@ -14,11 +15,11 @@ function App() {
   return (
     <div className="App">
           <div className="home">
-      <Topbar/>
-      <div className="home__container">
-      <Router>
-        <Aside/>
-        <AnimatePresence exitBeforeEnter initial>
+          <Router>
+          <Topbar/>
+             <div className="home__container">
+          <Aside/>
+         <AnimatePresence exitBeforeEnter initial>
           <Routes>
             <Route exact strict path="/" element={<Header/>}/>
             <Route exact strict path="/about" element={<About/>}/>
@@ -27,8 +28,9 @@ function App() {
             <Route exact strict path="/contact" element={<Contact/>}/>
           </Routes>
           </AnimatePresence>
-        </Router>
       </div>
+      </Router>
+
     </div>
 
     </div>

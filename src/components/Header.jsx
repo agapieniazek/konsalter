@@ -18,7 +18,7 @@ function Header() {
       </motion.div>
       <div className="header__info">
       <h1>Profesjonalny transport samochodów</h1>
-      <button>ZOBACZ OFERTE</button>
+      <button><a href="/offer">ZOBACZ OFERTE</a></button>
       </div>
     </div>
   )

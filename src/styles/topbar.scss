@@ -53,3 +53,45 @@
     text-align: center;
   }
 }
+@media (max-width: 576px){
+  .topbar{
+    position: relative;
+    &__logo{
+      font-size: 0.7rem;
+      width: 100vw;
+      padding-left: 20vw;
+    }
+    &__contact{
+      display: none;
+    }
+    &__lang{
+      position: absolute;
+      background-color:initial;
+      top: 70px;
+      right: 2vw;
+      z-index: 2;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 768px){
+  .topbar{
+    &__logo{
+      font-size: 1.1rem;
+      padding-left: 10vw;
+    }
+  }
+
+}
+@media (max-width: 992px){
+  .topbar{
+    &__contact{
+      display: none;
+    }
+    &__logo{
+      padding-left: 15vw;
+    }
+    &__lang{
+      flex: 0.2;
+    }
+  }
+}

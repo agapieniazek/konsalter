@@ -3,6 +3,7 @@ import Reducer from "./Reducer";
 
 const INITIAL_STATE = {
   lang: false,
+  menu: false,
 };
 
 export const Context = createContext(INITIAL_STATE);
@@ -17,6 +18,7 @@ export const ContextProvider = ({children}) => {
   return(
     <Context.Provider value={{
       lang: state.lang,
+      menu: state.menu,
       dispatch
     }}>
       {children}

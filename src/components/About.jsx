@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 import { Context } from '../context/Context';
 
 function About() {
-  const {lang} = useContext(Context);
+  const {lang, menu} = useContext(Context);
   const img= "https://images.pexels.com/photos/2348359/pexels-photo-2348359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
   
   const setText = () =>{
@@ -30,8 +30,7 @@ function About() {
   }
   
   return (
-    <div className='about'
->
+    <div className={menu ? "about about__active" : "about"}>
       <div className="about__img">
         <img src={img} alt="" />
       </div>

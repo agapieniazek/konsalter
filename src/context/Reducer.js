@@ -4,6 +4,10 @@ const Reducer = (state, action) => {
       return{
         lang: !state.lang,
       };
+      case "SWITCH_MENU":
+        return{
+          menu: !state.menu,
+        }
     default:
         return
   }

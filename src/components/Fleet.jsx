@@ -1,21 +1,23 @@
 import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useContext, useState } from 'react/cjs/react.development';
 import images from "../images/images.json";
 import Modal from './Modal';
 import "../styles/fleet.scss";
 import { motion } from 'framer-motion';
+import { Context } from "../context/Context";
 
 function Fleet() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
+  const {menu} = useContext(Context);
 
 
 
   const handleClick= (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.src);
+    window.scrollTo(0,0);
 }
-
 const handleRotationRight = () =>{
     const totalLength = images.images.length;
     if (currentIndex === totalLength - 1) {
@@ -53,7 +55,7 @@ const handelRotationLeft = () => {
 
 
   return (
-    <div className='fleet'>
+    <div className={menu ? "fleet__active fleet" : 'fleet'}>
       {images.images.map((item, index)=> (
         <div key={index} className='fleet__wrapper'>
           <motion.img 

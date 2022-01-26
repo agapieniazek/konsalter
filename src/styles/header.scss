@@ -55,3 +55,38 @@
     }
   }
 }
+
+@media (max-width: 576px){
+  .header{
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    &__info{
+      padding: 0px 40px;
+      & h1{
+        font-size:2.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 992px){
+  .header{
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    &__info{
+      & h1{
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px){
+  .header{
+    background-image: url("https://images.pexels.com/photos/370717/pexels-photo-370717.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    &__img{
+      display: none;
+    }
+  }
+}

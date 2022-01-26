@@ -11,7 +11,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [info, setInfo] = useState("");
 
-  const {lang} = useContext(Context);
+  const {lang, menu} = useContext(Context);
   
   
   
@@ -60,7 +60,7 @@ function Contact() {
     }
   
   return (
-    <div className="contact">
+    <div className={menu ? "contact contact__active" : "contact"}>
       <div className="contact__left">
       <motion.h1 
              initial={{x:200}} 
@@ -88,18 +88,19 @@ function Contact() {
             <label className="contact__label" htmlFor="email">Email: </label>
             <input value={email} onChange={(e) => {setEmail(e.target.value)}} type="text" id="email" name="email" placeholder={lang ? "Your email...":"Podaj email..."}/><br/>
             <label className="contact__label" htmlFor="message">{lang ? "Message:" : "Wiadomość:"} </label> <br/>
-            <textarea rows="6" cols="80" value={message} onChange={(e) => {setMessage(e.target.value)}} type="text" id="message" name="message" placeholder={lang ? "Write your message...":"Wpisz treść wiadomości..."}/><br/>
+            <textarea rows="5" cols="30" value={message} onChange={(e) => {setMessage(e.target.value)}} type="text" id="message" name="message" placeholder={lang ? "Write your message...":"Wpisz treść wiadomości..."}/><br/>
             <p className="contact__msg">{info}</p>      
             <button className="contact__btn" type="submit">{lang ? "Send" : "Wyślij"}</button>
           </motion.form>
         </div>
         </div>
         <div className="contact__right">
-          <motion.div
+          <motion.div 
                 initial={{y:300}} 
                 animate={{y: 0}} 
                  exit={{y:300}}
-                transition={{duration: 0.7}}              
+                transition={{duration: 0.7}}   
+                className='contact__card'           
           >
           <h2>KONSALTER</h2>
           <h3>Jarosław Dzieszko</h3>

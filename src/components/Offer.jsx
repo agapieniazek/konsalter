@@ -12,7 +12,7 @@ function Offer() {
   const [text, setText] = useState("");
   const [title, setTitle ] = useState("");
 
-  const {lang} = useContext(Context);
+  const {lang, menu} = useContext(Context);
 
   useEffect(() => {
     if(isSelected === 1) {
@@ -40,7 +40,7 @@ function Offer() {
 
 
   return (
-    <div className='offer'>
+    <div className={menu ? "offer offer__active" : "offer"}>
             <div className="offer__img">
         <img src={url} alt="" />
       </div>
@@ -64,6 +64,7 @@ function Offer() {
              transition={{duration: 1}}
           className={isSelected === 3 ? "activeBtn offer__btn" : "offer__btn "} onClick={()=> setIsSelected(3)}>{lang ? "TUG": "HOLOWNIK"}</motion.button>
         </div>
+        <div className="offer__bcg">
         <motion.div  initial={{y:100}} 
              animate={{y:0}} 
              exit={{y:100}}
@@ -78,6 +79,7 @@ function Offer() {
              transition={{duration: 1}}  
           className="offer__text-btn"><a href="/contact">{lang ? "Ask about price" : "Zapytaj o cenę"}</a></motion.button>
         </motion.div>
+        </div>
       </div>
     </div>
   )

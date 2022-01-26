@@ -52,3 +52,17 @@
     cursor: pointer;
   }
 }
+@media (max-width:576px){
+  .fleet{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__active{
+      overflow: hidden;
+    }
+  }
+  .overlay{
+   position:fixed;
+  }
+}

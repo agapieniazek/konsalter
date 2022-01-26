@@ -1,14 +1,18 @@
 @import "variables";
 
 .aside{
-  width: 11vw;
   font-family: $primary-font;
   height: calc(100vh - 80px);
   position: relative;
-  background-color: $dred-color;
   display: flex;
   flex-direction: column;
-  &__list{
+  background-color: $bcg-color;
+  &__toggle{
+    display: none;
+  }
+  &__list{  
+    width: 14vw;
+    background-color: $dred-color;
     height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
@@ -39,7 +43,7 @@
       font-weight: 600;
       letter-spacing: 4px;
       font-size: 1.4rem;
-      background-color: $dred-color;
+      background-color: $silver-color;
       display: flex;
       align-items: center;
       justify-content: center;  
@@ -60,5 +64,57 @@
     bottom: 0;
     color: $silver-color;
     font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 992px){
+  .aside{
+    position: relative;
+    background-color: black;
+    &__list{
+      height: calc(100vh - 120px);
+      display: none;
+    }
+    &__toggle{
+      display: flex;
+      position: absolute;
+      top: -90px;
+      left: 0;
+      & input {
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+        z-index: 1;
+      }
+      & i{
+        position: absolute;
+        color: $light-color;
+        font-size: 2.5rem;
+        top: 30px;
+        left: 15px;
+      }
+    }
+    &__active{
+      display: flex;
+      animation: menuopen 0.5s ease 1;
+      width: 40vw;
+    }
+  }
+}
+@media (max-width: 576px){
+  .aside{
+    &__toggle i {
+      top: 32px;
+    font-size: 2rem;
+  }
+}
+}
+@keyframes menuopen {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40vw;
   }
 }

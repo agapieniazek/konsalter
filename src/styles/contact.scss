@@ -6,7 +6,6 @@
   background-color: $bcg-color;
   color: $light-color;
   padding: 30px 70px;
-  position: relative;
   display: flex;
   flex-direction: row;
   &__left{
@@ -101,4 +100,71 @@
         color: $dred-color;
       }
     }
+}
+@media (max-width: 992px){
+  .contact{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    background-color: $bcg-color;
+    &__active{
+      overflow: hidden;
+    }
+    &__left{
+      width: 100vw;
+    }
+    &__title{
+      margin-top: 40px;
+    text-align: center;    
+    font-size: 3rem;
+    }
+    &__info{
+      margin-left: 20px;
+      padding-right: 50px;
+      width: 100vw;
+      font-size: 1.1rem;
+    }
+    &__label{
+      font-size: 1rem;
+    }
+    &__form{
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & input, textarea{
+        padding: 4px 10px;
+      }
+    }
+
+    &__right{
+      width: 100%;
+      margin-top: 50px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;     
+      border: 0; 
+    }
+    &__card{
+      border: 2px solid $bcg-color;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      color: $bcg-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      & h2{
+        color: $dred-color;
+      }
+    }
+    &__btn{
+      margin: 20px 0;
+      margin-left: 40px;
+    }
+  }
 }

@@ -1,14 +1,15 @@
 @import "variables";
 
 .offer{
-  flex:1;
+  width: 100%;
   position: relative;
   font-family: $primary-font;
+  overflow: hidden;
   &__img{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: -50%;
+    top: -40%;
     left: -20%;
     z-index: -1;
     opacity: 0.9;
@@ -42,7 +43,6 @@
     width: 100%;
     & h1{
       font-size: 4rem;
-
       color: $silver-color;
     }
     & p {
@@ -53,7 +53,7 @@
     }
     &-btn{
       position: absolute;
-      bottom: 10vh;
+      bottom: 0;
       right: 8vw;
       background-color: $dred-color;
       width: 250px;
@@ -72,6 +72,85 @@
     }
   }
 }
+
+.activeBtn{
+  height: 100%;
+  background-color: #0b090a00;
+  border-bottom: 3px solid $lred-color;
+  color: $lred-color;
+}
+
+@media (max-width: 576px){
+  .offer{
+    overflow: auto;
+    height: calc(100vh - 80px);
+    background-image: url("https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    &__active{
+      overflow: hidden;
+    }
+    &__img{
+    display: none;
+    }
+    &__options{
+      background-color: $bcg-color;
+      height: 100%;
+      flex-direction: column;
+      & button {
+        padding: 12px 0;
+        width: 80%;
+      }
+    }
+    &__info{
+      background-color: inherit;
+    }
+    &__bcg{
+      background-color: rgba(0, 0, 0, 0.89);
+    }
+    &__text{
+      padding: 10px;
+      text-align: center;
+      & h1{
+        margin-top: 30px;
+        font-size: 2.8rem;
+      }
+      & p{
+        width: 100%;
+      }
+      &-btn{
+        margin-top: 30px;
+        position:unset;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+@media (min-width: 576px) and (max-width:992px){
+  .offer{
+    overflow: hidden;
+    height: calc(100vh - 80px);
+    &__info{
+      overflow: hidden;
+    }
+    &__text{
+      padding: 10px;
+      text-align: center;
+      & h1{
+        margin-top: 30px;
+        font-size: 2.8rem;
+      }
+      & p{
+        width: 100%;
+      }
+      &-btn{
+        margin-top: 30px;
+        position:unset;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
 @keyframes grow {
   0% {
     transform: scale(1)
@@ -82,12 +161,4 @@
 100% {
   transform: scale(1)
 }
-}
-
-
-.activeBtn{
-  height: 100%;
-  background-color: #0b090a00;
-  border-bottom: 3px solid $lred-color;
-  color: $lred-color;
 }

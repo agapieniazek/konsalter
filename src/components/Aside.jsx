@@ -2,21 +2,34 @@ import React, { useContext } from 'react';
 import "../styles/Aside.scss";
 import {NavLink} from "react-router-dom";
 import { Context } from '../context/Context';
+import Footer from './Footer';
+import {motion} from "framer-motion";
 
 function Aside() {
-  const {lang} = useContext(Context);
+  const {lang, menu, dispatch} = useContext(Context);
 
-  const showRodo=()=>{
-    window.alert("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam tempora tempore, maiores tenetur, inventore distinctio voluptatum dolor harum quos, ullam sit quisquam consequatur nihil! Harum sapiente reprehenderit quod optio eligendi")
+  const toggleMenu = () => {
+    dispatch({type: "SWITCH_MENU"})
   }
+
 
   return (
     <div className="aside">
-      <div className="aside__list">
+      <div className="aside__toggle">
+        <input type="checkbox" value={menu} onClick={toggleMenu}></input>
+        {menu ? (<i class="far fa-window-close"></i> ): (<i class="fas fa-bars"></i>)}
+      </div>
+      <motion.div 
+             initial={{x:-200}} 
+             animate={{x: 0}} 
+             exit={{x:-200}}
+             transition={{duration: 0.5}}    
+             onClick={toggleMenu}  
+     className={menu ? "aside__list aside__active" : "aside__list"}>
           <NavLink end to="/about"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
            {lang ? "ABOUT" : "O NAS"}
           </NavLink>
-          <NavLink end to="/offer"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
+          <NavLink end to="/offer" className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
           {lang ? "OFFER" : "OFERTA"}
           </NavLink>
           <NavLink end to="/fleet"   className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
@@ -25,11 +38,12 @@ function Aside() {
           <NavLink end to="/contact"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
           {lang ? "CONTACT" : "KONTAKT"}
           </NavLink>
-      </div>
-      <div className="aside__rodo">
-        <p onClick={showRodo}>RODO</p>
-          <p>&copy; Agnieszka Pieniążek 2022</p>
-      </div>
+
+        <div className="aside__rodo">
+        <Footer/>
+        </div>
+      </motion.div>
+      <div className='aside__bcg'></div>
     </div>
   )
 }

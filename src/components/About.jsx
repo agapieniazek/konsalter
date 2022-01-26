@@ -22,7 +22,7 @@ function About() {
 
         Firma <span>KONSALTER </span> świadczy usługi w zakresie transportu samochodów osobowych na terenie kraju oraz UE. Wyróżniamy się znajomością rynku oraz posiadamy wieloletnie doświadczenie w branży motoryzacyjnej, co pozwala na rzetelną realizację usług. Jesteśmy skupieni na osiąganiu celów, a głównym z nich jest Twoje zadowolenie. Działamy sprawnie i szybko.
 
-<br /><br/>Realizujemy zamówienia dla dużych Przedsiębiorstw, małych Firm oraz Klientów indywidualnych. Posiadamy wszystkie niezbędne ubezpieczenia, dzięki czemu przewożony towar jest zawsze bezpieczny. Wiemy, jak ważny jest Twój czas, dlatego cenimy go i wszystkie realizowane przez nas zlecenia wykonujemy sprawnie i rzetelnie tak, abyś Ty mógł spać spokojnie.
+<br /><br/>Realizujemy zamówienia dla dużych przedsiębiorstw, małych firm oraz klientów indywidualnych. Posiadamy wszystkie niezbędne ubezpieczenia, dzięki czemu przewożony towar jest zawsze bezpieczny. Wiemy, jak ważny jest Twój czas, dlatego cenimy go i wszystkie realizowane przez nas zlecenia wykonujemy sprawnie i rzetelnie.
 
        </>
       )

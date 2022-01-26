@@ -47,7 +47,7 @@
     }
     & p {
       width: 80%;
-      color: $white-color;
+      color: $bcg-color;
       margin-top: 40px;
       line-height: 1.8em;
     }
@@ -76,8 +76,8 @@
 .activeBtn{
   height: 100%;
   background-color: #0b090a00;
-  border-bottom: 3px solid $lred-color;
-  color: $lred-color;
+  border-bottom: 3px solid $dred-color;
+  color: $dred-color;
 }
 
 @media (max-width: 576px){

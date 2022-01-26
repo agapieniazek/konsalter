@@ -43,11 +43,12 @@
       font-weight: 600;
       letter-spacing: 4px;
       font-size: 1.4rem;
-      background-color: $silver-color;
       display: flex;
       align-items: center;
       justify-content: center;  
       color: black;
+      font-size: 2rem;
+      color: $silver-color;
     }
   }
   &__rodo{
@@ -58,7 +59,7 @@
     position: absolute;
     height: 40px;
     width: 100%;
-    background-color: $bcg-color;
+    background-color: $white-color;
     overflow: hidden;
     height: 8%;
     bottom: 0;

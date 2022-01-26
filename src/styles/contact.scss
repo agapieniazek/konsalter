@@ -4,7 +4,7 @@
   flex:1;
   font-family: $primary-font;
   background-color: $bcg-color;
-  color: $light-color;
+  color: $white-color;
   padding: 30px 70px;
   display: flex;
   flex-direction: row;
@@ -14,18 +14,20 @@
     width: 50%;
   }
   &__title{
+
     font-size: 6rem;
     letter-spacing: 15px;
   }
   &__info{
-    color: $lred-color;
+    color: $dred-color;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
   }
     &__label{
       font-size: 1.2rem;
+      font-weight: 600;
       letter-spacing: 3px;
       margin-right: 10px;
       line-height: 3rem;
@@ -34,7 +36,7 @@
       & input, textarea{
         font-family: $primary-font;
         background-color: inherit;
-        border: 2px solid $light-color;
+        border: 2px solid $white-color;
         border-radius: 10px;
         padding: 10px 20px;
         color: $light-color;
@@ -67,10 +69,10 @@
     &__right{
       width: 100%;
       height: 100%;
-      margin: 120px;
+      margin: 100px;
       margin-left: 160px;
       margin-right: 100px;
-      border: 2px solid $silver-color;
+      border: 4px solid $white-color;
       border-radius: 10px;
       display: flex;
       padding: 20px;
@@ -80,14 +82,14 @@
       justify-content: start;
       align-items: center;
       & h2{
-        font-size: 2rem;
-        color: $light-color;
+        font-size: 3rem;
+        color: $white-color;
         letter-spacing: 8px;
       }
       & h3{
         letter-spacing: 5px;
-        color: $silver-color;
-        font-size: 1.4rem;  
+        color: $dred-color;
+        font-size: 1.8rem;  
         margin-bottom: 2vw;
       }
       & p{

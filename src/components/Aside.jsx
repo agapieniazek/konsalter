@@ -19,11 +19,7 @@ function Aside() {
         <input type="checkbox" value={menu} onClick={toggleMenu}></input>
         {menu ? (<i class="far fa-window-close"></i> ): (<i class="fas fa-bars"></i>)}
       </div>
-      <motion.div 
-             initial={{x:-200}} 
-             animate={{x: 0}} 
-             exit={{x:-200}}
-             transition={{duration: 0.5}}    
+      <div 
              onClick={toggleMenu}  
      className={menu ? "aside__list aside__active" : "aside__list"}>
           <NavLink end to="/about"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
@@ -42,7 +38,7 @@ function Aside() {
         <div className="aside__rodo">
         <Footer/>
         </div>
-      </motion.div>
+      </div>
       <div className='aside__bcg'></div>
     </div>
   )

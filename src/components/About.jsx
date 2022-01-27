@@ -5,15 +5,14 @@ import { Context } from '../context/Context';
 
 function About() {
   const {lang, menu} = useContext(Context);
-  const img= "https://images.pexels.com/photos/2348359/pexels-photo-2348359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
   
   const setText = () =>{
     if(lang){
       return(
         <>
-        Company  <span>KONSALTER </span> leads
-        The order marked a reversal from remarks made by Canadian Prime Minister Justin Trudeau on Monday. During a press conference, reporters pressed him on whether or not the nation's diplomats' families would be evacuated from Ukraine, Reuters reported.
-        <br/> <br/>The order marked a reversal from remarks made by Canadian Prime Minister Justin Trudeau on Monday. During a press conference, reporters pressed him on whether or not the nation's diplomats' families would be evacuated from Ukraine, Reuters reported.
+        Company  <span>KONSALTER </span> provides car transport services in the territory of Poland and the EU. We are distinguished by our knowledge of the market and we have many years of experience in the automotive industry, which allows us to provide reliable services. We are focused on achieving our goals, and the main one is your satisfaction. We operate efficiently and quickly.
+          <br/><br/>
+We carry out orders for large enterprises, small businesses and individual clients. We have all the necessary insurance, thanks to which the transported goods are always safe. We know how important your time is, which is why we value it and we execute all orders efficiently and reliably.
      </>
       )
     } else {
@@ -32,7 +31,6 @@ function About() {
   return (
     <div className={menu ? "about about__active" : "about"}>
       <div className="about__img">
-        <img src={img} alt="" />
       </div>
       <div className="about__info">
       <motion.h1 className="about__title" 

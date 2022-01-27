@@ -77,9 +77,8 @@ function Contact() {
         transition={{duration: 0.7}}      
       
       className="contact__info">
-        {lang ? "If you have any questions feel free to use this form to contact us" 
-        : "Jeżeli masz pytanie napisz do nas wiadomość Z chęcią odpowiemy na każde Twoje pytanie."}
-        
+        {lang ? "If you have any question send a message" 
+        : "Jeżeli masz pytanie napisz do nas "}
       </motion.p>
       <div className="contact__form">
           <motion.form initial={{y:100}} animate={{y: 0}} exit={{y: 100}} transition={{duration: 0.5}} onSubmit={sendEmail}>
@@ -104,12 +103,13 @@ function Contact() {
           >
           <h2>KONSALTER</h2>
           <h3>Jarosław Dzieszko</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Głogów Małopolski,
+          <p><i className="fas fa-map-marker-alt"></i> Głogów Małopolski,
         <br /> woj. podkarpackie
         </p>
 
-        <p><i class="fas fa-phone-alt"></i> +48 606 473 267</p>
-        <p><i class="fas fa-at"></i> dzieszko@op.pl</p>
+        <p><i className="fas fa-phone-alt"></i> +48 606 473 267</p>
+        <p><i className="fas fa-at"></i> dzieszko@op.pl</p>
+        <p><i className="far fa-building"></i> NIP: 545-123-12-99</p>
         </motion.div>
         </div>
     </div>

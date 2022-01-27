@@ -95,3 +95,12 @@
     }
   }
 }
+@media (min-width: 992px) and (max-width: 1200px){
+  .topbar{
+    &__contact{
+      & p{
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

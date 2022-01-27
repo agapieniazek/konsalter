@@ -3,15 +3,16 @@
 .about{
   position: relative;
   z-index: -1;
-  background-color: $bcg-color;
   color: $light-color;
   font-family: $primary-font;
   &__img{
+    background-image: url("../images/about.JPG");
      width: 100%;
+     height: 105%;
+     top: -5%;
+     background-size: cover;
     position: absolute;
     z-index: -2;
-    top: -50%;
-    left: -20%;
   }
   &__info{
     width: 100%;
@@ -51,6 +52,10 @@
     height: calc(100vh - 80px);
     &__active{
       overflow: hidden;
+    }
+    &__img{
+      left:-100%;
+      width: 200%;
     }
     &__info{
       width: 100vw;

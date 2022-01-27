@@ -2,7 +2,7 @@ import { createContext, useEffect, useReducer } from "react";
 import Reducer from "./Reducer";
 
 const INITIAL_STATE = {
-  lang: false,
+  lang: JSON.parse(localStorage.getItem("user")),
   menu: false,
 };
 

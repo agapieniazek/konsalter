@@ -6,8 +6,12 @@ import "../styles/topbar.scss";
 function Topbar() {
   const {lang, dispatch} = useContext(Context);
 
-  const toggleLang = () => {
-    dispatch({type: "SWITCH_LANG"})
+  const toggleLang= () => {
+    if(lang){
+      dispatch({type:"SWITCH_PL"})
+    }else {
+    dispatch({type: "SWITCH_EN"})
+    }
   }
   
   return (

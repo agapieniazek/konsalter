@@ -90,10 +90,15 @@
       }
       & i{
         position: absolute;
-        color: $light-color;
+        color: $white-color;
         font-size: 2.5rem;
         top: 30px;
         left: 15px;
+      }
+    }
+    &__link{
+      &__active{
+        font-size: 1.4rem;
       }
     }
     &__active{

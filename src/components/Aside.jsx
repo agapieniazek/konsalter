@@ -3,12 +3,12 @@ import "../styles/Aside.scss";
 import {NavLink} from "react-router-dom";
 import { Context } from '../context/Context';
 import Footer from './Footer';
-import {motion} from "framer-motion";
 
 function Aside() {
   const {lang, menu, dispatch} = useContext(Context);
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.preventDefault();
     dispatch({type: "SWITCH_MENU"})
   }
 
@@ -17,10 +17,9 @@ function Aside() {
     <div className="aside">
       <div className="aside__toggle">
         <input type="checkbox" value={menu} onClick={toggleMenu}></input>
-        {menu ? (<i class="far fa-window-close"></i> ): (<i class="fas fa-bars"></i>)}
+        {menu ? (<i className="far fa-window-close"></i> ): (<i className="fas fa-bars"></i>)}
       </div>
-      <div 
-             onClick={toggleMenu}  
+      <div onClick={toggleMenu}  
      className={menu ? "aside__list aside__active" : "aside__list"}>
           <NavLink end to="/about"  className={({isActive})=> (isActive ? "aside__link__active" : "aside__link")}>
            {lang ? "ABOUT" : "O NAS"}

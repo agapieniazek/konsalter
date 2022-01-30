@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContext, useState } from 'react/cjs/react.development';
+import { useState, useContext } from 'react';
 import Modal from './Modal';
 import "../styles/fleet.scss";
 import { motion } from 'framer-motion';

@@ -1,7 +1,7 @@
 import "../styles/offer.scss";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { Context } from "../context/Context";
 
 function Offer() {

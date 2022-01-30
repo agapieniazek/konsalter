@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import "../styles/contact.scss";
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';

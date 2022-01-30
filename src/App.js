@@ -21,10 +21,10 @@ function App() {
          <AnimatePresence exitBeforeEnter initial>
           <Routes>
             <Route exact strict path="/" element={<Header/>}/>
-            <Route exact strict path="/about" element={<About/>}/>
-            <Route exact strict path="/offer" element={<Offer/>}/>
-            <Route exact strict path="/fleet" element={<Fleet/>}/>
-            <Route exact strict path="/contact" element={<Contact/>}/>
+            <Route  path="/about" element={<About/>}/>
+            <Route  path="/offer" element={<Offer/>}/>
+            <Route  path="/fleet" element={<Fleet/>}/>
+            <Route  path="/contact" element={<Contact/>}/>
           </Routes>
           </AnimatePresence>
       </div>

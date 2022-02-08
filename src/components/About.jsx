@@ -3,6 +3,7 @@ import "../styles/about.scss";
 import {motion} from "framer-motion";
 import { Context } from '../context/Context';
 
+
 function About() {
   const {lang, menu} = useContext(Context);
   
@@ -47,6 +48,7 @@ We carry out orders for large enterprises, small businesses and individual clien
              exit={{x:100}}
              transition={{duration: 1}}      
       className="about__line"></motion.div>
+      <div className="about__container">
       <motion.p 
              initial={{y:100}} 
              animate={{y:0}} 
@@ -56,6 +58,8 @@ We carry out orders for large enterprises, small businesses and individual clien
       className="about__text">
         {setText()}
       </motion.p>
+
+      </div>
       </div>
     </div>
   )

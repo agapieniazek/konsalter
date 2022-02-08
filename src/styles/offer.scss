@@ -83,11 +83,15 @@
 @media (max-width: 576px){
   .offer{
     overflow: auto;
+    width: 100vw;
     height: calc(100vh - 80px);
     &__active{
       overflow: hidden;
     }
     &__img{
+      width: 100vw;
+      height: auto;
+      object-fit: cover;
       top: 20%;
       left:-80%;
       width: 300%;
